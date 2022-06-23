@@ -6,7 +6,7 @@ export class App {
     config.title = 'Routing demo';
     config.options.pushState = true;
     config.map([
-      { route: '',   moduleId: PLATFORM.moduleName('elements/posts/posts'), title: "Creed's blog" },
+      { route: ['', '/posts'],   moduleId: PLATFORM.moduleName('elements/posts/posts'), title: "Creed's blog" },
     ]);
   }
 }
