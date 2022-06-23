@@ -20,6 +20,7 @@ export class PostsService {
 
   public async getAll(): Promise<Post[]> {
     return await this.httpClient.fetch("/")
-      .then((res) => res.json());
+      .then((res) => res.json())
+      .then(res => { return res as Post[] });
   }
 }
