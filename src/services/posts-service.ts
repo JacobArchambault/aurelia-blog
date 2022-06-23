@@ -1,5 +1,6 @@
 import { autoinject } from 'aurelia-framework';
 import { HttpClient } from "aurelia-fetch-client";
+import { Post } from 'interfaces/post';
 
 @autoinject
 export class PostsService {
@@ -17,7 +18,7 @@ export class PostsService {
     });
   }
 
-  public async getAll(): Promise<string[]> {
+  public async getAll(): Promise<Post[]> {
     return await this.httpClient.fetch("/")
       .then((res) => res.json());
   }
