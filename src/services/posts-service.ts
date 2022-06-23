@@ -15,6 +15,10 @@ export class PostsService {
           },
         });
     });
+  }
 
+  public async getAll(): Promise<string[]> {
+    return await this.httpClient.fetch("/")
+      .then((res) => res.json());
   }
 }
