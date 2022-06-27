@@ -6,7 +6,8 @@ export class App {
     config.title = "Creed's blog";
     config.options.pushState = true;
     config.map([
-      { route: ['', '/posts'],   moduleId: PLATFORM.moduleName('elements/posts/posts'), title: "posts" },
+      { route: ['', ],   moduleId: PLATFORM.moduleName('index'), title: "Home" },
+      { route: ['/posts'],   moduleId: PLATFORM.moduleName('elements/posts/posts'), title: "Posts" },
       { route: '/posts/1',   moduleId: PLATFORM.moduleName('elements/post-detail/post-detail'), title: "post" },
     ]);
   }
