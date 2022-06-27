@@ -4,12 +4,10 @@ import { Post } from 'interfaces/post';
 
 @autoinject
 export class Posts {
-  posts: Post[]= [];
-  constructor(private postsService: PostsService){
-    this.getAll();
-  }
+  posts: Post[] = [];
+  constructor(private postsService: PostsService) { }
 
-  async getAll(): Promise<void>{
-    this.posts = await this.postsService.getAll()
+  async created(): Promise<void> {
+    await this.postsService.getAll().then(posts => this.posts = posts);
   }
 }
