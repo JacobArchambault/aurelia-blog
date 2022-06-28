@@ -8,8 +8,8 @@ export class PostDetail {
 
     constructor(private postsService: PostsService) { }
 
-    activate(parms, routeConfig) {
-        return this.postsService.getById(parms.id)
+    activate(params, routeConfig) {
+        return this.postsService.getById(params.id)
             .then(post=> this.post = post);
     }
 }
