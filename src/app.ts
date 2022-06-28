@@ -11,7 +11,7 @@ export class App {
     config.map([
       { route: ['', ],   moduleId: PLATFORM.moduleName('index'), title: "Home" },
       { route: ['/posts'],   moduleId: PLATFORM.moduleName('elements/posts/posts'), title: "Posts" },
-      { route: '/posts/:id',   moduleId: PLATFORM.moduleName('elements/post-detail/post-detail'), title: "post" },
+      { route: '/posts/:id',   moduleId: PLATFORM.moduleName('elements/post-detail/post-detail'), title: "Post" },
     ]);
   }
 }
