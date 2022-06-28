@@ -1,10 +1,15 @@
-import { Post } from "interfaces/post";
+import { inject } from 'aurelia-framework';
+import { Post } from 'interfaces/post';
+import { PostsService } from 'services/posts-service';
 
+@inject(PostsService)
 export class PostDetail {
-  private readonly post: Post = {
-    userId: 1,
-    id: 10,
-    title: "Sample post",
-    body: "I am the very model of a modern major general."
-  };
+     post: Post;
+
+    constructor(private postsService: PostsService) { }
+
+    activate(parms, routeConfig) {
+        return this.postsService.getById(parms.id)
+            .then(post=> this.post = post);
+    }
 }
