@@ -4,12 +4,11 @@ import { Post } from 'interfaces/post';
 
 @autoinject
 export class PostsService {
-  private baseUrl: string = "https://jsonplaceholder.typicode.com/posts/";
 
   constructor(private readonly httpClient: HttpClient) {
     httpClient.configure(config => {
       config
-        .withBaseUrl(this.baseUrl)
+        .withBaseUrl("https://jsonplaceholder.typicode.com/posts/")
         .withDefaults({
           headers: {
             Accept: 'application/json',
