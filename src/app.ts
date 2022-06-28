@@ -3,7 +3,7 @@ import { PLATFORM } from "aurelia-framework";
 
 export class App {
 
-  configureRouter(config: RouterConfiguration, router: Router): void {
+  configureRouter(config: RouterConfiguration): void {
     config.title = "Creed's blog";
     config.options.pushState = true;
     config.map([
