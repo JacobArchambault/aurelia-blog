@@ -8,7 +8,8 @@ export class Posts {
 
   constructor(private postsService: PostsService) { }
 
-  async created(): Promise<void> {
-    await this.postsService.getAll().then(posts => this.posts = posts);
+  private async created(): Promise<void> {
+    await this.postsService.getAll()
+      .then(posts => this.posts = posts);
   }
 }
