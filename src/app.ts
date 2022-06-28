@@ -1,4 +1,4 @@
-import { RouterConfiguration, Router } from 'aurelia-router';
+import { RouterConfiguration } from 'aurelia-router';
 import { PLATFORM } from "aurelia-framework";
 
 export class App {
