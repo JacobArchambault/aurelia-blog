@@ -8,8 +8,8 @@ export class PostDetail {
 
     constructor(private postsService: PostsService) { }
 
-    private async activate(params): Promise<Post> {
-        return this.postsService.getById(params.id)
+    private async activate(params): Promise<void> {
+        await this.postsService.getById(params.id)
             .then(post=> this.post = post);
     }
 }
