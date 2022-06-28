@@ -4,7 +4,7 @@ import { Post } from 'interfaces/post';
 
 @autoinject
 export class Posts {
-  posts: Post[] = [];
+  private posts: Post[] = [];
 
   constructor(private postsService: PostsService) { }
 

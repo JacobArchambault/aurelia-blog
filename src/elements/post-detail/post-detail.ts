@@ -4,7 +4,7 @@ import { PostsService } from 'services/posts-service';
 
 @inject(PostsService)
 export class PostDetail {
-     post: Post;
+    private post: Post;
 
     constructor(private postsService: PostsService) { }
 
