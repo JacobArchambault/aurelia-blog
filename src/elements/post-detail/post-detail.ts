@@ -8,7 +8,7 @@ export class PostDetail {
 
     constructor(private postsService: PostsService) { }
 
-    activate(params) {
+    async activate(params): Promise<Post> {
         return this.postsService.getById(params.id)
             .then(post=> this.post = post);
     }
